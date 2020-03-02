@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <head>
+       {% include 'header.html' %}
+      <title>File Process Results</title>
+   </head>
+   <body>
+   <p>Total number of records in the database: {{ allRec }}</p>
+   <p>Total records Processed: {{ recProc }}</p>
+   <p>Total records inserted: {{ totRec }}</p>
+   <p></p>
+   
+      {% if status == 'Success' %}
+	    File processed successfully!
+	  {% else %}
+	    Errors in processing file. <br />
+        Error: {{ status }} <br />
+		See {{ errorfile }} for duplicate primary key records (if any)
+	  {% endif %}
+	  {% include 'footer.html' %}
+   </body>
+</html>

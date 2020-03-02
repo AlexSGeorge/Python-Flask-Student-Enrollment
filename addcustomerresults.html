@@ -1,0 +1,37 @@
+<html>
+	<header>
+	<header>
+		{% include 'header.html' %}
+		<h2>Insert Results: </h2>
+   <body>
+
+      {% if status == 'Success' %}
+	    Customer record inserted successfully! <br />
+	  {% else %}
+	    Error - ID, First Name, and Last Name are required <br />
+		Error: {{ status }} <br />  
+	  {% endif %}
+	  <p>
+	  <table>
+	    <tr>
+			<td>Customer Id:  </td><td>{{ customer['cusId'] }}</td>
+		</tr>
+	    <tr>
+			<td>Customer Fist Name:  </td><td>{{ customer['cusFname'] }}</td>
+        </tr>
+        <tr>
+			<td>Customer Last Name:  </td><td>{{ customer['cusLname'] }}</td>
+		</tr>
+	    <tr>
+			<td>Customer State:  </td><td>{{ customer['cusState'] }}</td>
+		</tr>	    
+		<tr>
+			<td>Customer Sales YTD:  </td><td>{{ customer['cusSalesYTD'] }}</td>
+		</tr>	    
+		<tr>
+			<td>Customer Sales Prev:  </td><td>{{ customer['cusSalesPrev'] }}</td>
+		</tr>
+	  </table>
+	  {% include 'footer.html' %}
+   </body>
+</html>

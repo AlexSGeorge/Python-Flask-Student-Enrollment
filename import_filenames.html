@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <head>
+   </head>
+   {% include 'header.html' %}
+    <h2>Customer Import</h2>
+   <body>
+      <form action = "http://localhost:5000/import_fileprocess" method = "POST">
+	    <table>
+	    <p>Total number of records in the database: {{ totRec }}</p>
+		  <tr>
+		    <td>Source Text File:</td><td><input type = "file" name = "txtfile" /></td>
+		  </tr>
+		</table>
+		<p><input type = "submit" value = "Import" /> <input type = "reset"></p>
+      </form>
+      {% include 'footer.html' %}
+   </body>
+</html>

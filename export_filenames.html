@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+   <head>
+   </head>
+   {% include 'header.html' %}
+    <h2>Customer Export</h2>
+   <body>
+      <form action = "http://localhost:5000/export_fileprocess" method = "POST">
+	    <table>
+	    <p>Total number of records in the database: {{ totRec }}</p>
+		  <tr>
+		  <td>Enter File Name (e.g. export.txt):<td><td><input type="export" value = "export"/> </td>
+		</table>
+		<p><input type = "Submit" value = "Export" /> <input type = "reset"></p>
+      </form>
+      {% include 'footer.html' %}
+   </body>
+</html>

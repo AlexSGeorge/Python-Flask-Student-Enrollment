@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <head>
+   {% include 'header.html' %}
+      <title>Export File Process Results</title>
+   </head>
+   <body>
+   <p>Total number of records in the file: {{ totRec }}</p>
+   
+      {% if status == 'Success' %}
+	    File processed successfully!
+	  {% else %}
+	    Errors in processing file. <br />
+        Error: {{ status }} <br />
+		See {{ errorfile }} for duplicate primary key records (if any)
+	  {% endif %}
+	  {% include 'footer.html' %}
+   </body>
+</html>
